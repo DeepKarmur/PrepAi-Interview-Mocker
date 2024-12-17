@@ -78,11 +78,11 @@ function AddNewInterview() {
     <Dialog open={openDailog}>
       <DialogContent className="max-w-2xl">
       <DialogHeader>
-        <DialogTitle className="text-2xl">Tell us more about your job Interviewing</DialogTitle>
+        <DialogTitle className="text-2xl">Tell us more about your Job Interviewing</DialogTitle>
         <DialogDescription>
         <form onSubmit={onSubmit}>
          <div>
-            <h2>Add Details about your job position/role, Job Description and Years of Experience</h2>
+            <h2>Add Details about your Job Position/Role, Job Description and Years of Experience</h2>
         <div className='mt-7 my-3'>
             <label>Job Role/Job Position</label>
             <Input placeholder="Ex. Full Stack Developer" required
