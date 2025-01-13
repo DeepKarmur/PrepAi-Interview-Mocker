@@ -78,11 +78,11 @@ function AddNewInterview() {
     <Dialog open={openDailog}>
       <DialogContent className="max-w-2xl">
       <DialogHeader>
-        <DialogTitle className="text-2xl">Tell us more about your job Interviewing</DialogTitle>
+        <DialogTitle className="text-2xl">Tell us more about your Job Interviewing</DialogTitle>
         <DialogDescription>
         <form onSubmit={onSubmit}>
          <div>
-            <h2>Add Details about your job position/role, Job description and years of experience</h2>
+            <h2>Add Details about your Job Position/Role, Job Description and Years of Experience</h2>
         <div className='mt-7 my-3'>
             <label>Job Role/Job Position</label>
             <Input placeholder="Ex. Full Stack Developer" required
@@ -90,7 +90,7 @@ function AddNewInterview() {
         </div>
 
         <div className='my-2'>
-            <label>Job Description/ Tech Stack (In Short)</label>
+            <label>Job Description/ Tech Stack</label>
             <Textarea placeholder="Ex. React, Angular, MySql, etc" required
               onChange={(event)=> setJobDesc(event.target.value)} />
         </div>
