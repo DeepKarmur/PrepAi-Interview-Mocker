@@ -36,11 +36,11 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 ## Implementation 
-![Implementation](assets/1.jpeg)
-![Implementation](assets/2.jpeg)
-![Implementation](assets/3.jpeg)
-![Implementation](assets/4.jpeg)
-![Implementation](assets/5.jpeg)
-![Implementation](assets/6.jpeg)
-![Implementation](assets/7.jpeg)
-![Implementation](assets/8.jpeg)
+![Implementation](./assests/1.jpeg)
+![Implementation](./assests/2.jpeg)
+![Implementation](./assests/3.jpeg)
+![Implementation](./assests/4.jpeg)
+![Implementation](./assests/5.jpeg)
+![Implementation](./assests/6.jpeg)
+![Implementation](./assests/7.jpeg)
+![Implementation](./assests/8.jpeg)
