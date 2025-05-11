@@ -31,10 +31,12 @@ function Header() {
       <span className="text-blue-600 font-bold text-xl ml-2">PrepAI</span>
     </div>
         <ul className='hidden md:flex gap-6'>
-            <li className= {`hover:text-primary hover:font-bold transition-all cursor-pointer
-                ${path == '/dashboard' && 'text-primary font-bold'}
-                `}>
-                Dashboard</li>
+
+          <li 
+          onClick={() => navigateTo('/dashboard')}
+          className={`hover:text-primary hover:font-bold transition-all cursor-pointer 
+          ${path == '/dashboard' && 'text-primary font-bold'}
+          `}>Dashboard</li>
 
             <li 
                 onClick={() => navigateTo('/dashboard/about')} // 🔥 Added click handler for About Us
