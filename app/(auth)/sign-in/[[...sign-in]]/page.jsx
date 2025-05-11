@@ -1,10 +1,29 @@
 import { SignIn } from "@clerk/nextjs";
+import { currentUser } from "@clerk/nextjs/server";
+import { redirect } from "next/navigation";
 
-export default function Page() {
+export default async function Page() {
+
+  const user = await currentUser(); // 🔥 Check if user is already signed in
+
+  // 🔥 If user is already signed in, redirect or show alternative content
+  if (user) {
+    redirect("/dashboard");
+    // Option 1: You can add a message or sign-out button instead of the sign-in form
+    return (
+      <section className="bg-white">
+        <div className="flex flex-col items-center justify-center min-h-screen p-8">
+          <h2 className="text-2xl font-bold">You're already signed in</h2>
+          <p className="mt-2 text-gray-600">You don't need to sign in again.</p>
+          {/* You could add a sign-out button here if needed */}
+        </div>
+      </section>
+    );
+  }
+
     return(
-     
-
-<section className="bg-white">
+    
+  <section className="bg-white">
   <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
     <section className="relative flex h-32 items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6">
       <img
@@ -70,13 +89,10 @@ export default function Page() {
           AI is the future, driving innovation and transforming how we live and work.
           </p>
         </div>
-
-        <SignIn />;
+        <SignIn />
       </div>
     </main>
   </div>
 </section>
     )
-    
-    
-  }
+ }

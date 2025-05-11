@@ -61,11 +61,21 @@ function RecordAnswerSection({mockInterviewQuestion, activeQuestionIndex, onQues
         const MockJsonResp = (result.response.text().replace('```json','').replace('```',''));
         console.log(MockJsonResp);
 
-        const JsonFeedbackResp = JSON.parse(MockJsonResp);
+        // const JsonFeedbackResp = JSON.parse(MockJsonResp);
+        let JsonFeedbackResp = {};
+        
+        try {
+          JsonFeedbackResp = JSON.parse(MockJsonResp); //🔥 Safe JSON parsing
+        } catch (error) {
+          console.error("🔥 JSON Parse Error:", error);
+          toast("🔥 Error parsing feedback response");
+          setLoading(false);
+          return;
+        }
 
-        console.log(mockInterviewQuestion); // Check if the array contains objects with 'Answer'
-console.log(mockInterviewQuestion[activeQuestionIndex]); // Ensure the current question object exists
-console.log(mockInterviewQuestion[activeQuestionIndex]?.Answer); // Check if 'Answer' exists
+      console.log(mockInterviewQuestion); // Check if the array contains objects with 'Answer'
+      console.log(mockInterviewQuestion[activeQuestionIndex]); // Ensure the current question object exists
+      console.log(mockInterviewQuestion[activeQuestionIndex]?.Answer); // Check if 'Answer' exists
 
 
         const resp=await db.insert(UserAnswer)

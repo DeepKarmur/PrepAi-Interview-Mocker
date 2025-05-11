@@ -59,6 +59,10 @@
   }
 }
 
+.perspective-500 {
+  perspective: 500px;
+}
+
 @layer base {
   * {
     @apply border-border;
