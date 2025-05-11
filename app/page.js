@@ -245,13 +245,25 @@ export default function Home() {
         </div>
 
         {/* Footer */}
-        <footer className="bg-purple-900/30 text-white py-6">
+        {/* <footer className="bg-purple-900/30 text-white py-6">
           <div className="container mx-auto text-center">
             <p>&copy; {new Date().getFullYear()} PrepAI Mock Interview. All rights reserved.</p>
           </div>
-        </footer>
-      </motion.div>
-    </div>
+        </footer> */}
+
+ <footer className="bg-purple-900/30 text-white py-6">
+  <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between text-center md:text-left text-sm">
+    <p className="mb-2 md:mb-0">
+      <span className="font-semibold">PrepAI</span> Mock Interview Platform
+    </p>
+    <p className="mb-2 md:mb-0">
+      &copy; {new Date().getFullYear()} PrepAI Mock Interview. All rights reserved.
+    </p>
+    <p>Contact: deepspotify05@gmail.com</p>
+  </div>
+    </footer>
+  </motion.div>
+  </div>
   );
 }
 
