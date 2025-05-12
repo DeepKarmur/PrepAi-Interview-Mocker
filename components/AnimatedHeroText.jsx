@@ -142,13 +142,13 @@ const AnimatedHeroText = () => {
     }
   };
   
-  // 🔥 Updated gradient with brighter, higher contrast colors
+  //  Updated gradient with brighter, higher contrast colors
   const gradientTextClass = "text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-yellow-300 to-pink-300";
   
   return (
     <>
       <motion.div 
-        className="px-6 py-8 rounded-xl bg-black/50 backdrop-blur-md" // 🔥 Added container with semi-transparent background
+        className="px-6 py-8 rounded-xl bg-black/50 backdrop-blur-md" // Added container with semi-transparent background
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
@@ -165,7 +165,7 @@ const AnimatedHeroText = () => {
               <motion.span
                 key={index}
                 variants={letterVariants}
-                className="inline-block text-white" // 🔥 Explicitly set text color to white
+                className="inline-block text-white" //  Explicitly set text color to white
               >
                 {letter}
               </motion.span>
